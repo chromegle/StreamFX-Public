@@ -296,7 +296,9 @@ jobs:
           -Dlibobs_DIR="${{ github.workspace }}/build/obs/install" \
           -DQt${{ matrix.qt }}_DIR="${{ github.workspace }}/build/qt" \
           -DFFmpeg_DIR="${{ github.workspace }}/build/obsdeps" \
-          -DCURL_DIR="${{ github.workspace }}/build/obsdeps"
+          -DCURL_DIR="${{ github.workspace }}/build/obsdeps" \
+          -Dlibobs_DIR="${{ github.workspace }}/build/obs/libobs" \
+          -Dobs-frontend-api_DIR="${{ github.workspace }}/build\obs\frontend\api"
     - name: "Build: Debug"
       continue-on-error: true
       shell: bash
