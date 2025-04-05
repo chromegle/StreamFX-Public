@@ -11,7 +11,7 @@ if(NOT TARGET NVIDIA::AFX)
     add_library(NVIDIA::AFX IMPORTED INTERFACE)
     target_include_directories(NVIDIA::AFX
         INTERFACE
-            "${StreamFX_SOURCE_DIR}/third-party/nvidia-maxine-afx-sdk/nvafx/include/"
+            "${StreamFX_SOURCE_DIR}/third-party/nvidia-maxine-afx-sdk/include/"
     )
 endif()
 
@@ -20,8 +20,8 @@ if(NOT TARGET NVIDIA::AR)
     add_library(NVIDIA::AR IMPORTED INTERFACE)
     target_include_directories(NVIDIA::AR
         INTERFACE
-            "${StreamFX_SOURCE_DIR}/third-party/nvidia-maxine-ar-sdk/nvar/include/"
-            "${StreamFX_SOURCE_DIR}/third-party/nvidia-maxine-ar-sdk/nvar/src/"
+            "${StreamFX_SOURCE_DIR}/third-party/nvidia-maxine-ar-sdk/include/"
+            "${StreamFX_SOURCE_DIR}/third-party/nvidia-maxine-ar-sdk/src/"
     )
 endif()
 
@@ -30,8 +30,8 @@ if(NOT TARGET NVIDIA::VFX)
     add_library(NVIDIA::VFX IMPORTED INTERFACE)
     target_include_directories(NVIDIA::VFX
         INTERFACE
-            "${StreamFX_SOURCE_DIR}/third-party/nvidia-maxine-vfx-sdk/nvvfx/include/"
-            "${StreamFX_SOURCE_DIR}/third-party/nvidia-maxine-vfx-sdk/nvvfx/src/"
+            "${StreamFX_SOURCE_DIR}/third-party/nvidia-maxine-vfx-sdk/include/"
+            "${StreamFX_SOURCE_DIR}/third-party/nvidia-maxine-vfx-sdk/src/"
     )
 endif()
 
