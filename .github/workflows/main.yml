@@ -115,15 +115,16 @@ jobs:
         # obs-studio does not support ClangCL
         CMAKE_GENERATOR_TOOLSET: ""
       shell: bash
-      run: |
+      run:
+      # |
         # Apply patches to obs-studio
-        pushd "${{ github.workspace }}/third-party/obs-studio" > /dev/null
-        for f in ../../patches/obs-studio/*.patch; do
-          echo "Applying patch '${f}''..."
-          [ -e "$f" ] || continue
-          git apply "$f"
-        done
-        popd > /dev/null
+       # pushd "${{ github.workspace }}/third-party/obs-studio" > /dev/null
+       # for f in ../../patches/obs-studio/*.patch; do
+        #  echo "Applying patch '${f}''..."
+         # [ -e "$f" ] || continue
+        #  git apply "$f"
+        #done
+       # popd > /dev/null
 
         # Build obs-studio
         cmake \
